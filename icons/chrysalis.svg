@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 170" width="220" height="170">
+  <defs>
+    <linearGradient id="facetA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1E3A8A"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="facetB" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0056D2"/>
+      <stop offset="1" stop-color="#1E3A8A"/>
+    </linearGradient>
+    <linearGradient id="facetC" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#0056D2"/>
+    </linearGradient>
+    <linearGradient id="bodyG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#00F5FF"/>
+      <stop offset="0.35" stop-color="#0056D2"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <radialGradient id="coreGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#00F5FF" stop-opacity="0.95"/>
+      <stop offset="0.4" stop-color="#00F5FF" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#00F5FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="helixG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0056D2"/>
+      <stop offset="0.5" stop-color="#00F5FF"/>
+      <stop offset="1" stop-color="#0056D2"/>
+    </linearGradient>
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.6" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Left wing: low-poly facets, fanning from the body pivot -->
+  <g stroke="#0F172A" stroke-width="1.6" stroke-linejoin="round">
+    <polygon points="104,86 100,18 52,4"    fill="url(#facetA)"/>
+    <polygon points="104,86 52,4 18,34"     fill="url(#facetB)"/>
+    <polygon points="104,86 18,34 26,66"    fill="url(#facetC)"/>
+    <polygon points="104,86 26,66 58,80"    fill="url(#facetB)"/>
+    <polygon points="104,86 58,80 26,66"    fill="url(#facetA)" opacity="0.9"/>
+    <polygon points="104,86 58,80 30,116"   fill="url(#facetC)"/>
+    <polygon points="104,86 30,116 56,140"  fill="url(#facetB)"/>
+    <polygon points="104,86 56,140 104,124" fill="url(#facetA)"/>
+    <polygon points="104,86 56,80 104,74"   fill="url(#facetC)" opacity="0.85"/>
+  </g>
+
+  <!-- Right wing: DNA helix + binary dissolution -->
+  <g filter="url(#softGlow)" fill="none" stroke-linecap="round">
+    <path d="M112,30 C150,22 158,52 128,64 C98,76 108,108 152,100 C176,96 182,74 176,52"
+          stroke="url(#helixG)" stroke-width="2.9" opacity="0.95"/>
+    <path d="M112,54 C146,48 152,76 124,88 C100,98 112,126 152,118 C170,114 178,96 178,80"
+          stroke="url(#helixG)" stroke-width="2.9" opacity="0.7"/>
+    <!-- helix rungs -->
+    <path d="M122,34 L124,52 M138,29 L141,48 M152,27 L155,46 M117,63 L118,80 M133,58 L134,74 M147,55 L148,68 M113,94 L115,110 M127,102 L129,116 M144,101 L146,115"
+          stroke="#00F5FF" stroke-width="1.7" opacity="0.85"/>
+  </g>
+  <g font-family="ui-monospace, Menlo, monospace" font-size="13" fill="#00F5FF" opacity="0.9" font-weight="700" letter-spacing="1">
+    <text x="168" y="26" opacity="0.95">101</text>
+    <text x="158" y="44" opacity="0.6">010</text>
+    <text x="176" y="66" opacity="0.85">11</text>
+    <text x="162" y="92" opacity="0.6">101</text>
+    <text x="172" y="120" opacity="0.8">011</text>
+    <text x="150" y="140" opacity="0.5">10</text>
+  </g>
+
+  <!-- Antennae -->
+  <path d="M99,50 C92,36 84,32 74,30 M105,50 C112,36 120,32 130,30"
+        stroke="#0F172A" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  <path d="M74,30 L79,24 M74,30 L82,29 M130,30 L125,24 M130,30 L122,29"
+        stroke="#0F172A" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.9"/>
+
+  <!-- Core glow + body -->
+  <circle cx="102" cy="82" r="17" fill="url(#coreGlow)"/>
+  <ellipse cx="102" cy="88" rx="6.4" ry="30" fill="url(#bodyG)"/>
+  <circle cx="102" cy="53" r="5.2" fill="url(#bodyG)"/>
+</svg>

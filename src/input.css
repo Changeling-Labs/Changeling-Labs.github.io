@@ -3,37 +3,44 @@
 @tailwind utilities;
 
 /*
- * Custom styles carried over verbatim from the inline <style> block that used to
- * live in index.html. Written after the directives so their cascade position is
- * the same as before (they used to follow the CDN's injected stylesheet).
+ * Changeling Labs — global styles.
+ * Light clinical canvas: dot grid over #F8FAFC with a faint
+ * blue → turquoise radial at the top of the page.
  */
 body {
   font-family: 'Inter', sans-serif;
+  background-color: #f8fafc;
+  color: #0f172a;
 }
 
 .bg-grid {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(15, 23, 42, 0.08) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
-.glow-effect {
-  box-shadow: 0 0 50px -10px rgba(34, 197, 94, 0.15);
+.brand-glow {
+  background: radial-gradient(closest-side, rgba(0, 86, 210, 0.10), transparent);
 }
 
-.glow-pulse {
-  box-shadow: 0 0 50px -10px rgba(244, 63, 94, 0.18);
+.brand-glow-soft {
+  background: radial-gradient(closest-side, rgba(0, 245, 255, 0.10), transparent);
 }
 
 /*
  * The filter row scrolls horizontally on narrow screens; hide its scrollbar.
- * index.html already used `no-scrollbar`, but nothing ever defined it (the old
- * inline <style> block did not either), so the rule was a no-op.
  */
 .no-scrollbar {
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* legacy Edge/IE */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
-.no-scrollbar::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Edge */
+/*
+ * Privacy page: link focus rings match the hub.
+ */
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 2px solid rgba(0, 86, 210, 0.6);
+  outline-offset: 2px;
 }

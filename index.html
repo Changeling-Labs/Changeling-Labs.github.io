@@ -1,83 +1,89 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edmund Ashdown | Local-First Apps</title>
+    <title>Changeling Labs | Measure, Optimize, Transform</title>
+    <meta name="description" content="Changeling Labs builds free, open-source, local-first apps — no accounts, no subscriptions, no tracking. Your data never leaves your device.">
+    <meta name="theme-color" content="#0056D2">
+    <link rel="icon" type="image/png" href="icons/icon-192.png">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    <link rel="icon" type="image/svg+xml" href="icons/chrysalis.svg">
     <!-- Tailwind, compiled to a static stylesheet (rebuild with: npm run build:css) -->
-    <link rel="stylesheet" href="css/styles.css?v=20261105-2">
-    <!-- Google Font Inter -->
+    <link rel="stylesheet" href="css/styles.css?v=20261105-3">
+    <!-- Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="bg-zinc-950 text-zinc-100 min-h-screen flex flex-col relative overflow-x-hidden bg-grid antialiased">
+<body class="bg-[#F8FAFC] text-slate-900 min-h-screen flex flex-col relative overflow-x-hidden bg-grid antialiased">
 
-    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-brand-500/10 blur-[120px] pointer-events-none rounded-full"></div>
-    <div class="fixed bottom-0 right-0 w-[500px] h-[300px] bg-emerald-600/5 blur-[100px] pointer-events-none rounded-full"></div>
+    <div class="fixed top-[-140px] left-1/2 -translate-x-1/2 w-[900px] h-[400px] brand-glow pointer-events-none rounded-full"></div>
+    <div class="fixed bottom-[-120px] right-[-120px] w-[560px] h-[320px] brand-glow-soft pointer-events-none rounded-full"></div>
 
     <!-- Header Section -->
-    <header class="w-full border-b border-zinc-800/80 bg-zinc-950/70 backdrop-blur-md sticky top-0 z-50">
+    <header class="w-full border-b border-slate-200/80 bg-white/80 backdrop-blur-md sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-            <a href="#" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-emerald-700 text-zinc-950 font-bold text-lg flex items-center justify-center shadow-md group-hover:scale-105 transition-transform duration-200">
-                    EA
-                </div>
+            <a href="/" class="flex items-center gap-3 group">
+                <img src="icons/chrysalis.svg" alt="Changeling Labs" width="46" height="40" class="w-11 h-10 object-contain group-hover:scale-105 transition-transform duration-200">
                 <div>
-                    <h1 class="text-base font-semibold tracking-tight text-zinc-100 group-hover:text-brand-500 transition-colors">Edmund Ashdown</h1>
-                    <p class="text-xs text-zinc-400">edmundashdown.github.io</p>
+                    <h1 class="text-base leading-tight font-extrabold tracking-tight text-slate-900">
+                        Changeling <span class="font-semibold text-slate-500">Labs</span>
+                    </h1>
+                    <p class="text-[11px] text-slate-400 tracking-wide">changelinglabs.com</p>
                 </div>
             </a>
 
             <div class="flex items-center gap-3">
-                <a href="https://github.com/edmundashdown" target="_blank" rel="noopener noreferrer" 
-                   class="p-2 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white hover:border-zinc-700 hover:bg-zinc-800/80 transition-all flex items-center gap-2 text-sm font-medium">
+                <a href="https://github.com/edmundashdown" target="_blank" rel="noopener noreferrer"
+                   class="flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-white hover:bg-slate-800 transition-colors text-xs font-semibold">
                     <svg class="w-4 h-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
-                    <span class="hidden sm:inline">GitHub Profile</span>
+                    <span>GitHub</span>
                 </a>
             </div>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main class="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 py-12 z-10 flex flex-col gap-10">
+    <main class="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 py-12 z-10 flex flex-col gap-10" id="top">
 
         <!-- Hero Intro Section -->
-        <section class="space-y-4 max-w-2xl">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-500 text-xs font-medium">
-                <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+        <section class="space-y-5 max-w-3xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 border border-brand-100 text-brand-700 text-[11px] font-semibold tracking-wide">
+                <span class="w-2 h-2 rounded-full bg-turquoise animate-pulse"></span>
                 Open Source · Local-First
             </div>
-            <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
-                Local-first apps, free to use.
+            <h2 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.05]">
+                Measure. Optimize.<br>
+                <span class="bg-gradient-to-r from-brand-500 via-brand-400 to-turquoise bg-clip-text text-transparent">Transform.</span>
             </h2>
-            <p class="text-zinc-400 text-base sm:text-lg leading-relaxed max-w-xl">
-                Fast, installable web apps — no accounts, no subscriptions, no tracking. Your data never leaves your device.
+            <p class="text-slate-500 text-base sm:text-lg leading-relaxed max-w-xl">
+                Changeling Labs builds free, open-source, local-first tools that turn daily data into better habits — for fitness, focus, and everyday life. No accounts, no subscriptions, no tracking. Your data never leaves your device.
             </p>
         </section>
 
         <!-- Filter & Search Bar -->
-        <section class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 bg-zinc-900/60 p-2.5 rounded-2xl border border-zinc-800/80 backdrop-blur-sm">
+        <section class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 bg-white p-2.5 rounded-2xl border border-slate-200 shadow-card">
             <!-- Filter Tabs -->
             <div class="flex items-center gap-1 overflow-x-auto pb-1 sm:pb-0 no-scrollbar">
-                <button onclick="setFilter('all')" id="btn-all" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold transition-all bg-brand-500 text-zinc-950 shadow">
+                <button onclick="setFilter('all')" id="btn-all" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold transition-all bg-brand-500 text-white shadow">
                     All Projects
                 </button>
-                <button onclick="setFilter('active')" id="btn-active" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800/60 transition-all">
+                <button onclick="setFilter('active')" id="btn-active" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-500 hover:text-slate-900 hover:bg-slate-100 transition-all">
                     Active
                 </button>
-                <button onclick="setFilter('in-dev')" id="btn-in-dev" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800/60 transition-all">
+                <button onclick="setFilter('in-dev')" id="btn-in-dev" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-500 hover:text-slate-900 hover:bg-slate-100 transition-all">
                     In Development
                 </button>
             </div>
 
             <!-- Search Input -->
             <div class="relative min-w-[220px]">
-                <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-500"></i>
-                <input type="text" id="searchInput" oninput="handleSearch()" placeholder="Search apps..." 
-                       class="w-full bg-zinc-950/80 text-zinc-200 text-xs rounded-xl pl-9 pr-4 py-2.5 border border-zinc-800 focus:outline-none focus:border-brand-500/60 focus:ring-1 focus:ring-brand-500/60 transition-all placeholder:text-zinc-600">
+                <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                <input type="text" id="searchInput" oninput="handleSearch()" placeholder="Search apps..."
+                       class="w-full bg-white text-slate-800 text-xs rounded-xl pl-9 pr-4 py-2.5 border border-slate-200 focus:outline-none focus:border-brand-500/60 focus:ring-1 focus:ring-brand-500/60 transition-all placeholder:text-slate-400">
             </div>
         </section>
 
@@ -85,217 +91,217 @@
         <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="projectsGrid">
 
             <!-- Card 1: Iron Log -->
-            <article class="project-card group relative bg-zinc-900/50 hover:bg-zinc-900/90 border border-zinc-800/80 hover:border-zinc-700/80 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between glow-effect"
+            <article class="project-card group relative bg-white border border-slate-200 hover:border-emerald-300 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between shadow-card hover:shadow-lg"
                      data-status="active" data-title="iron log fitness workout tracker strength pwa">
                 <div class="space-y-4">
                     <div class="flex items-center justify-between">
-                        <div class="p-3 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 group-hover:scale-110 transition-transform">
+                        <div class="p-3 rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-100 group-hover:scale-110 transition-transform">
                             <i data-lucide="dumbbell" class="w-6 h-6"></i>
                         </div>
-                        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-medium">
-                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-[11px] font-semibold">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
                             Active
                         </span>
                     </div>
 
                     <div>
-                        <h3 class="text-xl font-bold text-zinc-100 group-hover:text-emerald-400 transition-colors flex items-center gap-2">
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-emerald-600 transition-colors flex items-center gap-2">
                             Iron Log
                         </h3>
-                        <p class="text-xs text-zinc-500 mt-0.5">Progressive Web App</p>
+                        <p class="text-xs text-slate-400 mt-0.5">Progressive Web App · Strength</p>
                     </div>
 
-                    <p class="text-zinc-400 text-sm leading-relaxed">
+                    <p class="text-slate-500 text-sm leading-relaxed">
                         Full-featured workout companion for tracking strength sets, time-based intervals, rounds, and comprehensive workout metrics.
                     </p>
 
                     <div class="flex flex-wrap gap-1.5 pt-2">
-                        <span class="px-2.5 py-0.5 rounded-md bg-zinc-800/80 text-zinc-400 text-[11px] font-medium border border-zinc-700/50">PWA</span>
-                        <span class="px-2.5 py-0.5 rounded-md bg-zinc-800/80 text-zinc-400 text-[11px] font-medium border border-zinc-700/50">Fitness</span>
-                        <span class="px-2.5 py-0.5 rounded-md bg-zinc-800/80 text-zinc-400 text-[11px] font-medium border border-zinc-700/50">Timer</span>
+                        <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-600 text-[11px] font-medium border border-slate-200">PWA</span>
+                        <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-600 text-[11px] font-medium border border-slate-200">Fitness</span>
+                        <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-600 text-[11px] font-medium border border-slate-200">Timer</span>
                     </div>
                 </div>
 
-                <div class="flex items-center gap-3 pt-6 mt-6 border-t border-zinc-800/60">
-                    <a href="/iron-log/" target="_blank" rel="noopener noreferrer" 
-                       class="flex-1 py-2.5 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-zinc-950 font-semibold text-xs transition-colors flex items-center justify-center gap-2 shadow-sm">
+                <div class="flex items-center gap-3 pt-6 mt-6 border-t border-slate-200">
+                    <a href="/iron-log/"
+                       class="flex-1 py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs transition-colors flex items-center justify-center gap-2 shadow-sm">
                         <span>Launch App</span>
                         <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
                     </a>
                     <a href="https://github.com/edmundashdown/iron-log" target="_blank" rel="noopener noreferrer" title="View Source Code"
-                       class="p-2.5 rounded-xl bg-zinc-800/80 hover:bg-zinc-700 text-zinc-300 border border-zinc-700/60 transition-colors flex items-center justify-center">
+                       class="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-500 border border-slate-200 transition-colors flex items-center justify-center">
                         <svg class="w-4 h-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
                     </a>
                 </div>
             </article>
 
             <!-- Card 2: Pulse -->
-            <article class="project-card group relative bg-zinc-900/50 hover:bg-zinc-900/90 border border-zinc-800/80 hover:border-zinc-700/80 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between glow-pulse"
+            <article class="project-card group relative bg-white border border-slate-200 hover:border-rose-300 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between shadow-card hover:shadow-lg"
                      data-status="active" data-title="pulse health cardio preventative metabolic recovery move fuel pwa open source lifespan wellness">
                 <div class="space-y-4">
                     <div class="flex items-center justify-between">
-                        <div class="p-3 rounded-xl bg-rose-500/10 text-rose-400 border border-rose-500/20 group-hover:scale-110 transition-transform">
+                        <div class="p-3 rounded-xl bg-rose-50 text-rose-600 border border-rose-100 group-hover:scale-110 transition-transform">
                             <i data-lucide="heart-pulse" class="w-6 h-6"></i>
                         </div>
-                        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-rose-500/10 border border-rose-500/30 text-rose-400 text-xs font-medium">
-                            <span class="w-1.5 h-1.5 rounded-full bg-rose-400 animate-pulse"></span>
+                        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-rose-50 border border-rose-200 text-rose-700 text-[11px] font-semibold">
+                            <span class="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse"></span>
                             Active
                         </span>
                     </div>
 
                     <div>
-                        <h3 class="text-xl font-bold text-zinc-100 group-hover:text-rose-400 transition-colors flex items-center gap-2">
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-rose-600 transition-colors flex items-center gap-2">
                             Pulse
                         </h3>
-                        <p class="text-xs text-zinc-500 mt-0.5">Progressive Web App · Health Engine</p>
+                        <p class="text-xs text-slate-400 mt-0.5">Progressive Web App · Health Engine</p>
                     </div>
 
-                    <p class="text-zinc-400 text-sm leading-relaxed">
+                    <p class="text-slate-500 text-sm leading-relaxed">
                         Engineered for Healthspan — a local-first, open-source health engine for lifelong capability, metabolic tracking and recovery. The next evolution of Iron Log.
                     </p>
 
                     <div class="flex flex-wrap gap-1.5 pt-2">
-                        <span class="px-2.5 py-0.5 rounded-md bg-zinc-800/80 text-zinc-400 text-[11px] font-medium border border-zinc-700/50">PWA</span>
-                        <span class="px-2.5 py-0.5 rounded-md bg-zinc-800/80 text-zinc-400 text-[11px] font-medium border border-zinc-700/50">Health</span>
-                        <span class="px-2.5 py-0.5 rounded-md bg-zinc-800/80 text-zinc-400 text-[11px] font-medium border border-zinc-700/50">Open Source</span>
+                        <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-600 text-[11px] font-medium border border-slate-200">PWA</span>
+                        <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-600 text-[11px] font-medium border border-slate-200">Health</span>
+                        <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-600 text-[11px] font-medium border border-slate-200">Open Source</span>
                     </div>
                 </div>
 
-                <div class="flex items-center gap-3 pt-6 mt-6 border-t border-zinc-800/60">
-                    <a href="/pulse/" target="_blank" rel="noopener noreferrer"
-                       class="flex-1 py-2.5 px-4 rounded-xl bg-rose-500 hover:bg-rose-600 text-zinc-950 font-semibold text-xs transition-colors flex items-center justify-center gap-2 shadow-sm">
+                <div class="flex items-center gap-3 pt-6 mt-6 border-t border-slate-200">
+                    <a href="/pulse/"
+                       class="flex-1 py-2.5 px-4 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-semibold text-xs transition-colors flex items-center justify-center gap-2 shadow-sm">
                         <span>Launch App</span>
                         <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
                     </a>
                     <a href="https://github.com/edmundashdown/pulse" target="_blank" rel="noopener noreferrer" title="View Source Code"
-                       class="p-2.5 rounded-xl bg-zinc-800/80 hover:bg-zinc-700 text-zinc-300 border border-zinc-700/60 transition-colors flex items-center justify-center">
+                       class="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-500 border border-slate-200 transition-colors flex items-center justify-center">
                         <svg class="w-4 h-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
                     </a>
                 </div>
             </article>
 
             <!-- Card 3: Bible Tracker -->
-            <article class="project-card group relative bg-zinc-900/50 hover:bg-zinc-900/90 border border-zinc-800/80 hover:border-zinc-700/80 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between"
+            <article class="project-card group relative bg-white border border-slate-200 hover:border-violet-300 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between shadow-card hover:shadow-lg"
                      data-status="active" data-title="bible tracker reading scripture chapters progress streak pwa offline">
                 <div class="space-y-4">
                     <div class="flex items-center justify-between">
-                        <div class="p-3 rounded-xl bg-violet-500/10 text-violet-400 border border-violet-500/20 group-hover:scale-110 transition-transform">
+                        <div class="p-3 rounded-xl bg-violet-50 text-violet-600 border border-violet-100 group-hover:scale-110 transition-transform">
                             <i data-lucide="book-open" class="w-6 h-6"></i>
                         </div>
-                        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-violet-500/10 border border-violet-500/30 text-violet-400 text-xs font-medium">
-                            <span class="w-1.5 h-1.5 rounded-full bg-violet-400 animate-pulse"></span>
+                        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-violet-50 border border-violet-200 text-violet-700 text-[11px] font-semibold">
+                            <span class="w-1.5 h-1.5 rounded-full bg-violet-500 animate-pulse"></span>
                             Active
                         </span>
                     </div>
 
                     <div>
-                        <h3 class="text-xl font-bold text-zinc-100 group-hover:text-violet-400 transition-colors">
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-violet-600 transition-colors">
                             Bible Tracker
                         </h3>
-                        <p class="text-xs text-zinc-500 mt-0.5">Progressive Web App</p>
+                        <p class="text-xs text-slate-400 mt-0.5">Progressive Web App · Reading Plan</p>
                     </div>
 
-                    <p class="text-zinc-400 text-sm leading-relaxed">
+                    <p class="text-slate-500 text-sm leading-relaxed">
                         Read-through-the-Bible progress tracker with per-book chapter grids, streaks, a finish-by-date plan, and offline support.
                     </p>
 
                     <div class="flex flex-wrap gap-1.5 pt-2">
-                        <span class="px-2.5 py-0.5 rounded-md bg-zinc-800/80 text-zinc-400 text-[11px] font-medium border border-zinc-700/50">PWA</span>
-                        <span class="px-2.5 py-0.5 rounded-md bg-zinc-800/80 text-zinc-400 text-[11px] font-medium border border-zinc-700/50">Bible</span>
-                        <span class="px-2.5 py-0.5 rounded-md bg-zinc-800/80 text-zinc-400 text-[11px] font-medium border border-zinc-700/50">Offline</span>
+                        <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-600 text-[11px] font-medium border border-slate-200">PWA</span>
+                        <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-600 text-[11px] font-medium border border-slate-200">Bible</span>
+                        <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-600 text-[11px] font-medium border border-slate-200">Offline</span>
                     </div>
                 </div>
 
-                <div class="flex items-center gap-3 pt-6 mt-6 border-t border-zinc-800/60">
-                    <a href="/bible-tracker/" target="_blank" rel="noopener noreferrer" 
-                       class="flex-1 py-2.5 px-4 rounded-xl bg-violet-500 hover:bg-violet-600 text-zinc-950 font-semibold text-xs transition-colors flex items-center justify-center gap-2 shadow-sm">
+                <div class="flex items-center gap-3 pt-6 mt-6 border-t border-slate-200">
+                    <a href="/bible-tracker/"
+                       class="flex-1 py-2.5 px-4 rounded-xl bg-violet-600 hover:bg-violet-700 text-white font-semibold text-xs transition-colors flex items-center justify-center gap-2 shadow-sm">
                         <span>Launch App</span>
                         <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
                     </a>
                     <a href="https://github.com/EdmundAshdown/bible-tracker" target="_blank" rel="noopener noreferrer" title="View Source Code"
-                       class="p-2.5 rounded-xl bg-zinc-800/80 hover:bg-zinc-700 text-zinc-300 border border-zinc-700/60 transition-colors flex items-center justify-center">
+                       class="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-500 border border-slate-200 transition-colors flex items-center justify-center">
                         <svg class="w-4 h-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
                     </a>
                 </div>
             </article>
 
             <!-- Card 4: Car Wash App -->
-            <article class="project-card group relative bg-zinc-900/50 hover:bg-zinc-900/90 border border-zinc-800/80 hover:border-zinc-700/80 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between"
+            <article class="project-card group relative bg-white border border-slate-200 hover:border-amber-300 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between shadow-card hover:shadow-lg"
                      data-status="in-dev" data-title="car wash service scheduling status tracking mobile">
                 <div class="space-y-4">
                     <div class="flex items-center justify-between">
-                        <div class="p-3 rounded-xl bg-amber-500/10 text-amber-400 border border-amber-500/20 group-hover:scale-110 transition-transform">
+                        <div class="p-3 rounded-xl bg-amber-50 text-amber-600 border border-amber-100 group-hover:scale-110 transition-transform">
                             <i data-lucide="car" class="w-6 h-6"></i>
                         </div>
-                        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-medium">
-                            <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-700 text-[11px] font-semibold">
+                            <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
                             In Development
                         </span>
                     </div>
 
                     <div>
-                        <h3 class="text-xl font-bold text-zinc-100 group-hover:text-amber-400 transition-colors">
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-amber-600 transition-colors">
                             Car Wash App
                         </h3>
-                        <p class="text-xs text-zinc-500 mt-0.5">Service & Scheduling Platform</p>
+                        <p class="text-xs text-slate-400 mt-0.5">Service & Scheduling Platform</p>
                     </div>
 
-                    <p class="text-zinc-400 text-sm leading-relaxed">
+                    <p class="text-slate-500 text-sm leading-relaxed">
                         Mobile-friendly web application designed for booking vehicle wash services, viewing packages, and real-time status tracking.
                     </p>
 
                     <div class="flex flex-wrap gap-1.5 pt-2">
-                        <span class="px-2.5 py-0.5 rounded-md bg-zinc-800/80 text-zinc-400 text-[11px] font-medium border border-zinc-700/50">Scheduling</span>
-                        <span class="px-2.5 py-0.5 rounded-md bg-zinc-800/80 text-zinc-400 text-[11px] font-medium border border-zinc-700/50">Mobile-First</span>
+                        <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-600 text-[11px] font-medium border border-slate-200">Scheduling</span>
+                        <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-600 text-[11px] font-medium border border-slate-200">Mobile-First</span>
                     </div>
                 </div>
 
-                <div class="flex items-center gap-3 pt-6 mt-6 border-t border-zinc-800/60">
-                    <a href="/car-wash/" target="_blank" rel="noopener noreferrer" 
-                       class="flex-1 py-2.5 px-4 rounded-xl bg-amber-500 hover:bg-amber-600 text-zinc-950 font-semibold text-xs border border-amber-500 transition-colors flex items-center justify-center gap-2">
+                <div class="flex items-center gap-3 pt-6 mt-6 border-t border-slate-200">
+                    <a href="/car-wash/"
+                       class="flex-1 py-2.5 px-4 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-semibold text-xs transition-colors flex items-center justify-center gap-2 shadow-sm">
                         <span>Preview Demo</span>
                         <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
                     </a>
                     <a href="https://github.com/EdmundAshdown/car-wash" target="_blank" rel="noopener noreferrer" title="View Source Code"
-                       class="p-2.5 rounded-xl bg-zinc-800/80 hover:bg-zinc-700 text-zinc-300 border border-zinc-700/60 transition-colors flex items-center justify-center">
+                       class="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-500 border border-slate-200 transition-colors flex items-center justify-center">
                         <svg class="w-4 h-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
                     </a>
                 </div>
             </article>
 
             <!-- Card 5: Personal Calendar -->
-            <article class="project-card group relative bg-zinc-900/50 hover:bg-zinc-900/90 border border-zinc-800/80 hover:border-zinc-700/80 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between"
+            <article class="project-card group relative bg-white border border-slate-200 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between shadow-card"
                      data-status="in-dev" data-title="personal calendar scheduling event management dashboard">
                 <div class="space-y-4">
                     <div class="flex items-center justify-between">
-                        <div class="p-3 rounded-xl bg-sky-500/10 text-sky-400 border border-sky-500/20 group-hover:scale-110 transition-transform">
+                        <div class="p-3 rounded-xl bg-sky-50 text-sky-600 border border-sky-100 group-hover:scale-110 transition-transform">
                             <i data-lucide="calendar" class="w-6 h-6"></i>
                         </div>
-                        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-400 text-xs font-medium">
-                            <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+                        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-sky-50 border border-sky-200 text-sky-700 text-[11px] font-semibold">
+                            <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
                             Planned
                         </span>
                     </div>
 
                     <div>
-                        <h3 class="text-xl font-bold text-zinc-100 group-hover:text-sky-400 transition-colors">
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-sky-600 transition-colors">
                             Personal Calendar
                         </h3>
-                        <p class="text-xs text-zinc-500 mt-0.5">Productivity Dashboard</p>
+                        <p class="text-xs text-slate-400 mt-0.5">Productivity Dashboard</p>
                     </div>
 
-                    <p class="text-zinc-400 text-sm leading-relaxed">
+                    <p class="text-slate-500 text-sm leading-relaxed">
                         Clean and minimalist scheduling tool engineered for fast event entry, agenda overviews, and personalized schedule management.
                     </p>
 
                     <div class="flex flex-wrap gap-1.5 pt-2">
-                        <span class="px-2.5 py-0.5 rounded-md bg-zinc-800/80 text-zinc-400 text-[11px] font-medium border border-zinc-700/50">Productivity</span>
-                        <span class="px-2.5 py-0.5 rounded-md bg-zinc-800/80 text-zinc-400 text-[11px] font-medium border border-zinc-700/50">Dashboard</span>
+                        <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-600 text-[11px] font-medium border border-slate-200">Productivity</span>
+                        <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-600 text-[11px] font-medium border border-slate-200">Dashboard</span>
                     </div>
                 </div>
 
-                <div class="flex items-center gap-3 pt-6 mt-6 border-t border-zinc-800/60">
-                    <span class="flex-1 py-2.5 px-4 rounded-xl bg-zinc-900 text-zinc-500 font-semibold text-xs border border-zinc-800 flex items-center justify-center gap-2 cursor-default">
+                <div class="flex items-center gap-3 pt-6 mt-6 border-t border-slate-200">
+                    <span class="flex-1 py-2.5 px-4 rounded-xl bg-slate-100 text-slate-400 font-semibold text-xs border border-slate-200 flex items-center justify-center gap-2 cursor-default">
                         <i data-lucide="construction" class="w-3.5 h-3.5"></i>
                         <span>Not published yet</span>
                     </span>
@@ -305,28 +311,29 @@
         </section>
 
         <!-- Empty Search State -->
-        <div id="noResults" class="hidden text-center py-12 space-y-3 bg-zinc-900/30 rounded-2xl border border-zinc-800/50">
-            <div class="inline-flex p-3 rounded-full bg-zinc-800 text-zinc-400">
+        <div id="noResults" class="hidden text-center py-12 space-y-3 bg-white rounded-2xl border border-slate-200">
+            <div class="inline-flex p-3 rounded-full bg-slate-100 text-slate-400">
                 <i data-lucide="folder-search" class="w-6 h-6"></i>
             </div>
-            <h4 class="text-base font-semibold text-zinc-200">No matching projects found</h4>
-            <p class="text-xs text-zinc-500">Try adjusting your search term or active filter tabs.</p>
+            <h4 class="text-base font-semibold text-slate-700">No matching projects found</h4>
+            <p class="text-xs text-slate-400">Try adjusting your search term or active filter tabs.</p>
         </div>
 
     </main>
 
     <!-- Footer -->
-    <footer class="w-full border-t border-zinc-800/80 bg-zinc-950/80 py-8 mt-12 z-10">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
+    <footer class="w-full border-t border-slate-200 bg-white py-8 mt-4 z-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
             <div class="flex items-center gap-2">
-                <span>&copy; <span id="year"></span> Edmund Ashdown. Hosted on GitHub Pages.</span>
+                <img src="icons/chrysalis.svg" alt="" width="18" height="16" class="w-4 h-4 object-contain opacity-70" aria-hidden="true">
+                <span>&copy; <span id="year"></span> Changeling Labs. Hosted on GitHub Pages.</span>
             </div>
             <div class="flex items-center gap-4">
-                <a href="/privacy.html" class="hover:text-zinc-300 transition-colors">Privacy</a>
+                <a href="/privacy.html" class="hover:text-slate-900 transition-colors">Privacy</a>
                 <span>&bull;</span>
-                <a href="https://github.com/edmundashdown" target="_blank" class="hover:text-zinc-300 transition-colors">GitHub</a>
+                <a href="https://github.com/edmundashdown" target="_blank" class="hover:text-slate-900 transition-colors">GitHub</a>
                 <span>&bull;</span>
-                <a href="#top" class="hover:text-zinc-300 transition-colors">Back to top</a>
+                <a href="#top" class="hover:text-slate-900 transition-colors">Back to top</a>
             </div>
         </div>
     </footer>
@@ -343,17 +350,17 @@
 
         function setFilter(filter) {
             currentFilter = filter;
-            
+
             // Update Tab Styles
             document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.classList.remove('bg-brand-500', 'text-zinc-950', 'shadow');
-                btn.classList.add('text-zinc-400');
+                btn.classList.remove('bg-brand-500', 'text-white', 'shadow');
+                btn.classList.add('text-slate-500', 'hover:text-slate-900', 'hover:bg-slate-100');
             });
 
             const activeBtn = document.getElementById(`btn-${filter}`);
             if (activeBtn) {
-                activeBtn.classList.remove('text-zinc-400');
-                activeBtn.classList.add('bg-brand-500', 'text-zinc-950', 'shadow');
+                activeBtn.classList.remove('text-slate-500', 'hover:text-slate-900', 'hover:bg-slate-100');
+                activeBtn.classList.add('bg-brand-500', 'text-white', 'shadow');
             }
 
             applyFilters();
@@ -373,7 +380,7 @@
                 const title = card.getAttribute('data-title').toLowerCase();
 
                 const matchesFilter = (currentFilter === 'all') || (status === currentFilter);
-                const matchesSearch = title.includes(query);
+                const matchesSearch = !query || title.includes(query);
 
                 if (matchesFilter && matchesSearch) {
                     card.classList.remove('hidden');
@@ -383,13 +390,7 @@
                 }
             });
 
-            // Toggle No Results View
-            const noResults = document.getElementById('noResults');
-            if (visibleCount === 0) {
-                noResults.classList.remove('hidden');
-            } else {
-                noResults.classList.add('hidden');
-            }
+            document.getElementById('noResults').classList.toggle('hidden', visibleCount !== 0);
         }
     </script>
 </body>

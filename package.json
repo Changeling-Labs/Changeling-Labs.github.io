@@ -1,8 +1,8 @@
 {
-  "name": "edmundashdown-github-io",
+  "name": "changelinglabs-com",
   "version": "1.0.0",
   "private": true,
-  "description": "Central hub for edmundashdown.github.io",
+  "description": "Changeling Labs hub \u2014 changelinglabs.com (static index + privacy policy)",
   "scripts": {
     "build:css": "tailwindcss -i ./src/input.css -o ./css/styles.css --minify",
     "watch:css": "tailwindcss -i ./src/input.css -o ./css/styles.css --watch"
