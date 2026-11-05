@@ -44,7 +44,7 @@
             <p class="text-xs font-medium uppercase tracking-widest text-brand-500 mb-2">Privacy</p>
             <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">Privacy Policy</h2>
             <p class="text-zinc-400 text-sm mt-3">
-                Last updated <time datetime="2026-10-16">16 October 2026</time> &middot; covers
+                Last updated <time datetime="2026-11-05">5 November 2026</time> &middot; covers
                 <a href="/" class="text-zinc-300 underline decoration-zinc-700 hover:decoration-brand-500 hover:text-brand-500 transition-colors">edmundashdown.github.io</a>
                 and the apps hosted under it.
             </p>
@@ -68,8 +68,8 @@
                 <h3 class="text-lg font-bold text-white">What this covers</h3>
                 <p class="text-zinc-400">
                     The hub at <span class="text-zinc-300">edmundashdown.github.io</span> and the applications linked
-                    from it: Iron Log (<span class="text-zinc-300">/iron-log/</span>), Bible Tracker
-                    (<span class="text-zinc-300">/bible-tracker/</span>) and the Car Wash demo
+                    from it: Iron Log (<span class="text-zinc-300">/iron-log/</span>), Pulse (<span class="text-zinc-300">/pulse/</span>),
+                    Bible Tracker (<span class="text-zinc-300">/bible-tracker/</span>) and the Car Wash demo
                     (<span class="text-zinc-300">/car-wash/</span>). Each one is open source in its own public
                     repository, so every claim below can be checked against the code rather than taken on trust.
                 </p>
@@ -101,6 +101,11 @@
                                 <td class="px-5 py-3">IndexedDB</td>
                             </tr>
                             <tr>
+                                <td class="px-5 py-3 text-zinc-200 font-medium">Pulse</td>
+                                <td class="px-5 py-3">Logged workouts, exercises, preferences &mdash; the same store Iron Log uses</td>
+                                <td class="px-5 py-3">IndexedDB (shared with Iron Log)</td>
+                            </tr>
+                            <tr>
                                 <td class="px-5 py-3 text-zinc-200 font-medium">Bible Tracker</td>
                                 <td class="px-5 py-3">Reading progress, read history, notes, stars</td>
                                 <td class="px-5 py-3">localStorage</td>
@@ -120,6 +125,9 @@
                     has an Export button for a portable JSON backup; use it before clearing anything. Note too that the
                     storage is scoped to the address you opened &mdash; the same app served from a different address (a
                     local file, a local server, or the published site) has its own separate store, and they do not sync.
+                    Pulse and Iron Log are the one exception worth naming: they are served from the same origin, and
+                    Pulse deliberately reads and writes the same IndexedDB database, so your training history carries
+                    over between the two apps.
                 </p>
             </section>
 
@@ -138,7 +146,7 @@
                     </li>
                     <li class="rounded-xl border border-zinc-800/80 bg-zinc-900/50 px-5 py-4">
                         <p class="text-zinc-200 font-medium">Google Fonts <span class="text-zinc-500 font-normal">&mdash; fonts.googleapis.com, fonts.gstatic.com</span></p>
-                        <p class="text-zinc-400 mt-1">Serves the Inter typeface. Used by the hub, Iron Log and the Car Wash demo; Bible Tracker uses system fonts only.</p>
+                        <p class="text-zinc-400 mt-1">Serves the Inter typeface (hub, Iron Log, Pulse, Car Wash demo) and, for Iron Log and Pulse, Barlow Condensed for display type. Bible Tracker uses system fonts only.</p>
                     </li>
                     <li class="rounded-xl border border-zinc-800/80 bg-zinc-900/50 px-5 py-4">
                         <p class="text-zinc-200 font-medium">unpkg.com <span class="text-zinc-500 font-normal">&mdash; icon script</span></p>
@@ -180,7 +188,7 @@
                 <p class="text-zinc-400">
                     Because nothing is transmitted, there is nothing for me to hand over, delete, or leak on your
                     behalf. The data the apps hold is already only in your browser, on your device: export it for a
-                    backup, or clear the site's data to remove it entirely. All three apps can export a JSON backup,
+                    backup, or clear the site's data to remove it entirely. All four apps can export a JSON backup,
                     so do that before clearing anything. Bible Tracker additionally detects when browser storage is
                     unavailable &mdash; in a private window, for instance &mdash; and tells you, rather than appearing
                     to save your progress.
