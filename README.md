@@ -24,6 +24,11 @@ npm run build:css  # rewrites css/styles.css
 
 `npm run watch:css` rebuilds on save while working locally.
 
+**Cache-busting:** Pages serves `css/styles.css` with a 10-minute cache, so a stale
+stylesheet can survive a push and render new markup with old styles. The link tag in
+`index.html`/`privacy.html` carries a `?v=<date>-<n>` suffix — **bump it whenever the
+CSS changes**, and browsers with the old file fetch the new one immediately.
+
 Source of truth for the stylesheet is `src/input.css` plus the theme in
 `tailwind.config.js` (the `brand` colour ramp and `darkMode: 'class'`). Tailwind scans
 `./index.html` and `./privacy.html` for class names (the `content` array), including
