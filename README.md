@@ -8,6 +8,19 @@ Central hub for [changelinglabs.com](https://changelinglabs.com/) — Changeling
 > text system are defined in the brand guide (Obsidian Vault → 💰 Business Ideas → Changeling Labs Branding).
 > Keep changes consistent with it.
 
+## Brand assets
+
+The mark in `icons/chrysalis-mark.png`, the PWA icons `icons/icon-{192,512}.png` and the
+`icons/lockup.png` banner are extracted directly from the brand guide's own renders (the
+transparency spec-sheet image and the style-guide header) by `tools/make-brand-icons.py`:
+
+```sh
+python3 tools/make-brand-icons.py   # requires Pillow and read access to the vault
+```
+
+Nothing is redrawn or re-generated — the artwork is keyed off its background and cleaned of
+the guide's hairlines. Do not hand-edit the PNGs; change the script or the source images instead.
+
 Each app lives in **its own repo** with its own GitHub Pages site, and the hub links to it
 at `/<repo>/` (e.g. `iron-log`, `car-wash`) under the shared custom domain. A link to an app
 whose repo has no Pages site enabled will 404, so add the card only once the app is deployed.
