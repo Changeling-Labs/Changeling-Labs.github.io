@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy | Changeling Labs</title>
-    <meta name="description" content="Privacy policy for changelinglabs.com and the apps hosted under it: no accounts, no analytics, no cookies, and all data stays in your browser.">
+    <meta name="description" content="Privacy policy for changelinglabs.com and the apps hosted under it: no analytics, no cookies, and data stays in your browser unless you opt in to Pulse cloud sync.">
     <link rel="icon" type="image/png" href="icons/icon-192.png">
     <link rel="apple-touch-icon" href="icons/icon-192.png">
     <!-- Tailwind, compiled to a static stylesheet (rebuild with: npm run build:css) -->
@@ -46,7 +46,7 @@
             <p class="text-xs font-medium uppercase tracking-widest text-brand-500 mb-2">Privacy</p>
             <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">Privacy Policy</h2>
             <p class="text-slate-500 text-sm mt-3">
-                Last updated <time datetime="2026-11-05">5 November 2026</time> &middot; covers
+                Last updated <time datetime="2026-11-07">7 November 2026</time> &middot; covers
                 <a href="/" class="text-slate-700 underline decoration-slate-300 hover:decoration-brand-500 hover:text-brand-500 transition-colors">changelinglabs.com</a>
                 and the apps hosted under it.
             </p>
@@ -56,10 +56,10 @@
         <div class="rounded-2xl border border-brand-100 bg-brand-50 p-6 mb-10">
             <h3 class="text-xs font-semibold uppercase tracking-widest text-brand-500 mb-3">The short version</h3>
             <ul class="space-y-2 text-sm text-slate-700 leading-relaxed">
-                <li>&mdash; No accounts, no sign-in, no email collected.</li>
-                <li>&mdash; No analytics, no advertising, no tracking, and no cookies at all.</li>
-                <li>&mdash; The apps keep your data in your own browser. It is never uploaded.</li>
-                <li>&mdash; There is no server-side database of anything you do here.</li>
+                <li>&mdash; No accounts, no tracking, and no cookies by default.</li>
+                <li>&mdash; Apps keep your data in your own browser. Nothing leaves the device unless you turn on Pulse's optional cloud sync.</li>
+                <li>&mdash; Pulse sync is opt-in, uses a passwordless email sign-in, and stores only your own records.</li>
+                <li>&mdash; No analytics, no advertising, and no server-side database unless you enable that sync.</li>
             </ul>
         </div>
 
@@ -100,7 +100,7 @@
                             <tr>
                                 <td class="px-5 py-3 text-slate-800 font-medium">Pulse</td>
                                 <td class="px-5 py-3">Logged workouts, exercises, fuel, recovery and preferences</td>
-                                <td class="px-5 py-3">IndexedDB</td>
+                                <td class="px-5 py-3">IndexedDB; Supabase only if you enable cloud sync</td>
                             </tr>
                             <tr>
                                 <td class="px-5 py-3 text-slate-800 font-medium">Bible Tracker</td>
@@ -121,7 +121,9 @@
                     <span class="text-slate-700">clearing site data for this site deletes it permanently</span>. Each app
                     has an Export button for a portable JSON backup; use it before clearing anything. Note too that the
                     storage is scoped to the address you opened &mdash; the same app served from a different address (a
-                    local file, a local server, or the published site) has its own separate store, and they do not sync.
+                    local file, a local server, or the published site) has its own separate store, and those stores do
+                    not merge automatically. Pulse's opt-in cloud sync is the exception: signing in on two devices lets
+                    them share one history.
                 </p>
             </section>
 
@@ -147,6 +149,10 @@
                         <p class="text-slate-500 mt-1">A CDN that delivers the Lucide icon library used by the hub page. This privacy page deliberately does not load it.</p>
                     </li>
                     <li class="rounded-xl border border-slate-200 bg-white shadow-card px-5 py-4">
+                        <p class="text-slate-800 font-medium">Supabase <span class="text-slate-400 font-normal">&mdash; optional Pulse cloud sync</span></p>
+                        <p class="text-slate-500 mt-1">Only contacted if you sign in to Pulse and turn sync on. Your email address and the records you choose to sync are stored in Pulse's Supabase project, protected by row-level security. Signed out, no request is made.</p>
+                    </li>
+                    <li class="rounded-xl border border-slate-200 bg-white shadow-card px-5 py-4">
                         <p class="text-slate-800 font-medium">Bible.com</p>
                         <p class="text-slate-500 mt-1">Only if you follow a &ldquo;Read on Bible.com&rdquo; link in Bible Tracker. That is a normal outbound link: you leave this site, and the destination's own policy applies.</p>
                     </li>
@@ -170,9 +176,9 @@
                     <li>&mdash; No analytics, telemetry, or usage reporting of any kind.</li>
                     <li>&mdash; No advertising, no trackers, no third-party pixels.</li>
                     <li>&mdash; No cookies, and no fingerprinting.</li>
-                    <li>&mdash; No accounts, passwords, or email addresses collected.</li>
-                    <li>&mdash; No data sold or shared with anyone &mdash; there is nothing to sell, because nothing is collected.</li>
-                    <li>&mdash; No personal data stored on a server, because there is no server behind these apps.</li>
+                    <li>&mdash; No accounts, passwords, or email addresses by default. Pulse's optional sync is the only sign-in, and it is passwordless.</li>
+                    <li>&mdash; No data sold or shared with anyone. There is no advertising or analytics to fund.</li>
+                    <li>&mdash; No personal data stored on a server unless you choose to enable Pulse sync.</li>
                 </ul>
             </section>
 
@@ -180,11 +186,13 @@
             <section class="space-y-3">
                 <h3 class="text-lg font-bold text-slate-900">Your data, your control</h3>
                 <p class="text-slate-500">
-                    Because nothing is transmitted, there is nothing for me to hand over, delete, or leak on your
-                    behalf. The data the apps hold is already only in your browser, on your device: export it for a
-                    backup, or clear the site's data to remove it entirely. All four apps can export a JSON backup,
-                    so do that before clearing anything. Bible Tracker additionally detects when browser storage is
-                    unavailable &mdash; in a private window, for instance &mdash; and tells you, rather than appearing
+                    By default nothing is transmitted, so there is nothing for me to hand over, delete, or leak on your
+                    behalf. The data the apps hold is only in your browser, on your device: export it for a backup, or
+                    clear the site's data to remove it entirely. Every app can export a JSON backup, so do that before
+                    clearing anything. If you use Pulse's optional sync, signed-in devices share a copy through
+                    Supabase; turning sync off stops further copies, and clearing site data does not by itself delete
+                    records already synced. Bible Tracker additionally detects when browser storage
+                    is unavailable &mdash; in a private window, for instance &mdash; and tells you, rather than appearing
                     to save your progress.
                 </p>
             </section>
@@ -194,7 +202,9 @@
                 <h3 class="text-lg font-bold text-slate-900">Children</h3>
                 <p class="text-slate-500">
                     No personal information is collected from anyone, including children under 13. There is no account
-                    to create and no form that sends data anywhere.
+                    to create and no form that sends data anywhere by default. The one exception is Pulse's optional
+                    cloud sync, which uses an email address for passwordless sign-in; it is off unless an adult chooses
+                    to enable it.
                 </p>
             </section>
 
@@ -202,9 +212,9 @@
             <section class="space-y-3">
                 <h3 class="text-lg font-bold text-slate-900">Changes to this policy</h3>
                 <p class="text-slate-500">
-                    If a future feature changes any of this &mdash; a sync service, for example, would be the obvious
-                    candidate &mdash; this page will say so plainly and the date at the top will change. The full history
-                    of this page is public in the repository, so anything that changed, and when, is visible.
+                    If a future feature changes any of this, this page will say so plainly and the date at the top
+                    will change. The full history of this page is public in the repository, so anything that changed,
+                    and when, is visible.
                 </p>
             </section>
 
