@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy | Changeling Labs</title>
-    <meta name="description" content="Privacy policy for changelinglabs.com and the apps hosted under it: no analytics, no cookies, and data stays in your browser unless you opt in to Pulse cloud sync.">
+    <meta name="description" content="Privacy policy for changelinglabs.com and the apps hosted under it: no accounts, no cookies, cookieless aggregate analytics, and data stays in your browser unless you opt in to Pulse cloud sync.">
     <link rel="icon" type="image/png" href="icons/icon-192.png">
     <link rel="apple-touch-icon" href="icons/icon-192.png">
     <!-- Tailwind, compiled to a static stylesheet (rebuild with: npm run build:css) -->
@@ -56,10 +56,10 @@
         <div class="rounded-2xl border border-brand-100 bg-brand-50 p-6 mb-10">
             <h3 class="text-xs font-semibold uppercase tracking-widest text-brand-500 mb-3">The short version</h3>
             <ul class="space-y-2 text-sm text-slate-700 leading-relaxed">
-                <li>&mdash; No accounts, no tracking, and no cookies by default.</li>
+                <li>&mdash; No accounts, no advertising, and no cookies.</li>
                 <li>&mdash; Apps keep your data in your own browser. Nothing leaves the device unless you turn on Pulse's optional cloud sync.</li>
                 <li>&mdash; Pulse sync is opt-in, uses a passwordless email sign-in, and stores only your own records.</li>
-                <li>&mdash; No analytics, no advertising, and no server-side database unless you enable that sync.</li>
+                <li>&mdash; Cookieless, aggregate analytics on the hub and Pulse: no persistent IDs, no cross-site profiles, and it cannot see your logged data.</li>
             </ul>
         </div>
 
@@ -84,7 +84,8 @@
                     The hub page stores <span class="text-slate-800">nothing</span>: no cookies, no identifiers, no
                     local storage &mdash; it is static HTML and CSS. The applications that hold progress keep it in
                     your browser's own storage, which never leaves your device and is not visible to this site or to
-                    anyone else.
+                    anyone else. The only measurement request is the aggregate pageview described below; it never sees
+                    your app data.
                 </p>
 
                 <div class="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-card">
@@ -141,6 +142,10 @@
                         <p class="text-slate-500 mt-1">Serves every page here, so GitHub necessarily sees the requests and keeps whatever logs its own policy allows. This site keeps no logs of its own.</p>
                     </li>
                     <li class="rounded-xl border border-slate-200 bg-white shadow-card px-5 py-4">
+                        <p class="text-slate-800 font-medium">GoatCounter <span class="text-slate-400 font-normal">&mdash; cookieless analytics</span></p>
+                        <p class="text-slate-500 mt-1">The hub and Pulse load GoatCounter on the production domain only. It records aggregate pageviews, referrers and coarse browser/device/country summaries &mdash; no cookies, no persistent identifiers, no cross-site profiles, and no access to your sets, meals or check-ins. Localhost and preview hosts are not counted.</p>
+                    </li>
+                    <li class="rounded-xl border border-slate-200 bg-white shadow-card px-5 py-4">
                         <p class="text-slate-800 font-medium">Google Fonts <span class="text-slate-400 font-normal">&mdash; fonts.googleapis.com, fonts.gstatic.com</span></p>
                         <p class="text-slate-500 mt-1">Serves the Inter typeface (hub, Pulse, Car Wash demo) and Barlow Condensed for Pulse's display type. Bible Tracker uses system fonts only.</p>
                     </li>
@@ -163,9 +168,10 @@
                 </ul>
 
                 <p class="text-slate-500">
-                    I do not operate Google Fonts, unpkg or GitHub, receive no data back from them, and use none of them
-                    for analytics. They appear here only because a request to their servers reveals your IP address to
-                    them, under their own privacy policies.
+                    I do not operate Google Fonts, unpkg or GitHub, and I receive no data back from them. GoatCounter is
+                    the only analytics service, and it is deliberately cookieless and aggregate. These services appear
+                    here because a request to their servers reveals your IP address to them, under their own privacy
+                    policies.
                 </p>
             </section>
 
@@ -173,27 +179,36 @@
             <section class="space-y-3">
                 <h3 class="text-lg font-bold text-slate-900">What this site does not do</h3>
                 <ul class="space-y-2 text-slate-500">
-                    <li>&mdash; No analytics, telemetry, or usage reporting of any kind.</li>
-                    <li>&mdash; No advertising, no trackers, no third-party pixels.</li>
+                    <li>&mdash; No personal analytics, telemetry, or cross-site tracking.</li>
+                    <li>&mdash; No advertising, no ad trackers, no third-party pixels.</li>
                     <li>&mdash; No cookies, and no fingerprinting.</li>
                     <li>&mdash; No accounts, passwords, or email addresses by default. Pulse's optional sync is the only sign-in, and it is passwordless.</li>
-                    <li>&mdash; No data sold or shared with anyone. There is no advertising or analytics to fund.</li>
+                    <li>&mdash; No data sold or shared with anyone. The only analytics is the cookieless aggregate pageview described above.</li>
                     <li>&mdash; No personal data stored on a server unless you choose to enable Pulse sync.</li>
                 </ul>
+            </section>
+
+            <!-- Measurement -->
+            <section class="space-y-3">
+                <h3 class="text-lg font-bold text-slate-900">Measurement</h3>
+                <p class="text-slate-500">
+                    The hub and Pulse load <a href="https://www.goatcounter.com/" target="_blank" rel="noopener noreferrer" class="text-slate-700 underline decoration-slate-300 hover:decoration-brand-500 hover:text-brand-500">GoatCounter</a>
+                    only on <span class="text-slate-700">changelinglabs.com</span>. It is a cookieless, open-source analytics service that records aggregate pageviews, referrers and coarse browser/device/country summaries. It does not set cookies, create a persistent ID, build a cross-site profile, or receive your sets, meals or check-ins. Localhost and preview hosts are excluded. The purpose is only to know whether pages are being found and which app pages are being used.
+                </p>
             </section>
 
             <!-- Control -->
             <section class="space-y-3">
                 <h3 class="text-lg font-bold text-slate-900">Your data, your control</h3>
                 <p class="text-slate-500">
-                    By default nothing is transmitted, so there is nothing for me to hand over, delete, or leak on your
-                    behalf. The data the apps hold is only in your browser, on your device: export it for a backup, or
-                    clear the site's data to remove it entirely. Every app can export a JSON backup, so do that before
-                    clearing anything. If you use Pulse's optional sync, signed-in devices share a copy through
-                    Supabase; turning sync off stops further copies, and clearing site data does not by itself delete
-                    records already synced. Bible Tracker additionally detects when browser storage
-                    is unavailable &mdash; in a private window, for instance &mdash; and tells you, rather than appearing
-                    to save your progress.
+                    By default your app data is not transmitted, so there is nothing for me to hand over, delete, or
+                    leak on your behalf. The data the apps hold is only in your browser, on your device: export it for a
+                    backup, or clear the site's data to remove it entirely. Every app can export a JSON backup, so do
+                    that before clearing anything. If you use Pulse's optional sync, signed-in devices share a copy
+                    through Supabase; turning sync off stops further copies, and clearing site data does not by itself
+                    delete records already synced. Bible Tracker additionally detects when browser storage is
+                    unavailable &mdash; in a private window, for instance &mdash; and tells you, rather than appearing to
+                    save your progress.
                 </p>
             </section>
 
@@ -259,6 +274,20 @@
 
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+    <script>
+        // Cookieless, aggregate analytics on the production domain only.
+        (function () {
+            var host = location.hostname;
+            if (host !== 'changelinglabs.com' && host !== 'www.changelinglabs.com') return;
+            var s = document.createElement('script');
+            s.async = true;
+            s.src = 'https://gc.zgo.at/count.js';
+            s.setAttribute('data-goatcounter', 'https://changelinglabs.goatcounter.com/count');
+            s.setAttribute('data-goatcounter-settings', '{"allow_local":false}');
+            document.head.appendChild(s);
+        })();
     </script>
 </body>
 </html>

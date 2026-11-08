@@ -351,5 +351,19 @@
             document.getElementById('noResults').classList.toggle('hidden', visibleCount !== 0);
         }
     </script>
+
+    <script>
+        // Cookieless, aggregate analytics on the production domain only.
+        (function () {
+            var host = location.hostname;
+            if (host !== 'changelinglabs.com' && host !== 'www.changelinglabs.com') return;
+            var s = document.createElement('script');
+            s.async = true;
+            s.src = 'https://gc.zgo.at/count.js';
+            s.setAttribute('data-goatcounter', 'https://changelinglabs.goatcounter.com/count');
+            s.setAttribute('data-goatcounter-settings', '{"allow_local":false}');
+            document.head.appendChild(s);
+        })();
+    </script>
 </body>
 </html>
