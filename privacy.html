@@ -70,7 +70,7 @@
                 <h3 class="text-lg font-bold text-slate-900">What this covers</h3>
                 <p class="text-slate-500">
                     The hub at <span class="text-slate-700">changelinglabs.com</span> and the applications linked
-                    from it: Iron Log (<span class="text-slate-700">/iron-log/</span>), Pulse (<span class="text-slate-700">/pulse/</span>),
+                    from it: Pulse (<span class="text-slate-700">/pulse/</span>),
                     Bible Tracker (<span class="text-slate-700">/bible-tracker/</span>) and the Car Wash demo
                     (<span class="text-slate-700">/car-wash/</span>). Each one is open source in its own public
                     repository, so every claim below can be checked against the code rather than taken on trust.
@@ -98,14 +98,9 @@
                         </thead>
                         <tbody class="divide-y divide-slate-200 text-slate-500">
                             <tr>
-                                <td class="px-5 py-3 text-slate-800 font-medium">Iron Log</td>
-                                <td class="px-5 py-3">Logged workouts, exercises, preferences</td>
-                                <td class="px-5 py-3">IndexedDB</td>
-                            </tr>
-                            <tr>
                                 <td class="px-5 py-3 text-slate-800 font-medium">Pulse</td>
-                                <td class="px-5 py-3">Logged workouts, exercises, preferences &mdash; the same store Iron Log uses</td>
-                                <td class="px-5 py-3">IndexedDB (shared with Iron Log)</td>
+                                <td class="px-5 py-3">Logged workouts, exercises, fuel, recovery and preferences</td>
+                                <td class="px-5 py-3">IndexedDB</td>
                             </tr>
                             <tr>
                                 <td class="px-5 py-3 text-slate-800 font-medium">Bible Tracker</td>
@@ -127,9 +122,6 @@
                     has an Export button for a portable JSON backup; use it before clearing anything. Note too that the
                     storage is scoped to the address you opened &mdash; the same app served from a different address (a
                     local file, a local server, or the published site) has its own separate store, and they do not sync.
-                    Pulse and Iron Log are the one exception worth naming: they are served from the same origin, and
-                    Pulse deliberately reads and writes the same IndexedDB database, so your training history carries
-                    over between the two apps.
                 </p>
             </section>
 
@@ -148,7 +140,7 @@
                     </li>
                     <li class="rounded-xl border border-slate-200 bg-white shadow-card px-5 py-4">
                         <p class="text-slate-800 font-medium">Google Fonts <span class="text-slate-400 font-normal">&mdash; fonts.googleapis.com, fonts.gstatic.com</span></p>
-                        <p class="text-slate-500 mt-1">Serves the Inter typeface (hub, Iron Log, Pulse, Car Wash demo) and, for Iron Log and Pulse, Barlow Condensed for display type. Bible Tracker uses system fonts only.</p>
+                        <p class="text-slate-500 mt-1">Serves the Inter typeface (hub, Pulse, Car Wash demo) and Barlow Condensed for Pulse's display type. Bible Tracker uses system fonts only.</p>
                     </li>
                     <li class="rounded-xl border border-slate-200 bg-white shadow-card px-5 py-4">
                         <p class="text-slate-800 font-medium">unpkg.com <span class="text-slate-400 font-normal">&mdash; icon script</span></p>

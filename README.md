@@ -22,7 +22,7 @@ Nothing is redrawn or re-generated — the artwork is keyed off its background a
 the guide's hairlines. Do not hand-edit the PNGs; change the script or the source images instead.
 
 Each app lives in **its own repo** with its own GitHub Pages site, and the hub links to it
-at `/<repo>/` (e.g. `iron-log`, `car-wash`) under the shared custom domain. A link to an app
+at `/<repo>/` (e.g. `pulse`, `car-wash`) under the shared custom domain. A link to an app
 whose repo has no Pages site enabled will 404, so add the card only once the app is deployed.
 
 ## Domain & deployment
@@ -81,7 +81,7 @@ transfer, so history and most links survive. The critical sequence:
 1. Create the `changelinglabs` org (needs an org-admin account — the hub currently lives under a personal account).
 2. Create `changelinglabs.github.io` in the org with the hub contents.
 3. Move the custom domain to it (Pages settings → custom domain `changelinglabs.com`).
-4. Transfer `pulse`, `iron-log`, `bible-tracker`, `car-wash` into the org one at a time.
+4. Transfer `pulse`, `bible-tracker`, `car-wash` into the org one at a time.
 5. Point source-code links in `index.html`/`privacy.html`/READMEs at `github.com/changelinglabs/*`.
 6. Keep the user-site repo until the org site builds; then retire it or leave it as a redirect-free archive.
 
