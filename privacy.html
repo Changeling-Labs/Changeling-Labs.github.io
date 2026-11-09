@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy | Changeling Labs</title>
-    <meta name="description" content="Privacy policy for changelinglabs.com and the apps hosted under it: no accounts, no cookies, cookieless aggregate analytics, and data stays in your browser unless you opt in to Pulse cloud sync.">
+    <meta name="description" content="Privacy policy for changelinglabs.com and the apps hosted under it: no accounts, no cookies, cookieless aggregate analytics, and data stays in your browser except for the shared state you explicitly opt into (Pulse cloud sync and About Time outings).">
     <link rel="icon" type="image/png" href="icons/icon-192.png">
     <link rel="apple-touch-icon" href="icons/icon-192.png">
     <!-- Tailwind, compiled to a static stylesheet (rebuild with: npm run build:css) -->
-    <link rel="stylesheet" href="css/styles.css?v=20261105-3">
+    <link rel="stylesheet" href="css/styles.css?v=20261108-1">
     <!-- Google Font Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,8 +57,9 @@
             <h3 class="text-xs font-semibold uppercase tracking-widest text-brand-500 mb-3">The short version</h3>
             <ul class="space-y-2 text-sm text-slate-700 leading-relaxed">
                 <li>&mdash; No accounts, no advertising, and no cookies.</li>
-                <li>&mdash; Apps keep your data in your own browser. Nothing leaves the device unless you turn on Pulse's optional cloud sync.</li>
+                <li>&mdash; Apps keep your data in your own browser. The only exceptions are the two you explicitly opt into: Pulse cloud sync and About Time outings.</li>
                 <li>&mdash; Pulse sync is opt-in, uses a passwordless email sign-in, and stores only your own records.</li>
+                <li>&mdash; About Time has no sign-in: it shares only the display name, battery level and &ldquo;ready&rdquo; state you enter for an outing, plus a push subscription if you turn alerts on.</li>
                 <li>&mdash; Cookieless, aggregate analytics on the hub and Pulse: no persistent IDs, no cross-site profiles, and it cannot see your logged data.</li>
             </ul>
         </div>
@@ -71,7 +72,8 @@
                 <p class="text-slate-500">
                     The hub at <span class="text-slate-700">changelinglabs.com</span> and the applications linked
                     from it: Pulse (<span class="text-slate-700">/pulse/</span>),
-                    Bible Tracker (<span class="text-slate-700">/bible-tracker/</span>) and the Car Wash demo
+                    Bible Tracker (<span class="text-slate-700">/bible-tracker/</span>), About Time
+                    (<span class="text-slate-700">/about-time/</span>) and the Car Wash demo
                     (<span class="text-slate-700">/car-wash/</span>). Each one is open source in its own public
                     repository, so every claim below can be checked against the code rather than taken on trust.
                 </p>
@@ -84,8 +86,9 @@
                     The hub page stores <span class="text-slate-800">nothing</span>: no cookies, no identifiers, no
                     local storage &mdash; it is static HTML and CSS. The applications that hold progress keep it in
                     your browser's own storage, which never leaves your device and is not visible to this site or to
-                    anyone else. The only measurement request is the aggregate pageview described below; it never sees
-                    your app data.
+                    anyone else. The two exceptions are features you choose to use: Pulse cloud sync and About Time,
+                    whose whole purpose is to share a small amount of state with the other people in your outing. The
+                    only measurement request is the aggregate pageview described below; it never sees your app data.
                 </p>
 
                 <div class="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-card">
@@ -109,6 +112,11 @@
                                 <td class="px-5 py-3">localStorage</td>
                             </tr>
                             <tr>
+                                <td class="px-5 py-3 text-slate-800 font-medium">About Time</td>
+                                <td class="px-5 py-3">Display name, chosen emoji, social-battery level, &ldquo;ready&rdquo; state, and a push subscription if alerts are on</td>
+                                <td class="px-5 py-3">Supabase (shared with the people in your outing); device storage keeps only which outing you are in</td>
+                            </tr>
+                            <tr>
                                 <td class="px-5 py-3 text-slate-800 font-medium">Car Wash demo</td>
                                 <td class="px-5 py-3">Demonstration member records (synthetic, not real people)</td>
                                 <td class="px-5 py-3">IndexedDB</td>
@@ -123,8 +131,8 @@
                     has an Export button for a portable JSON backup; use it before clearing anything. Note too that the
                     storage is scoped to the address you opened &mdash; the same app served from a different address (a
                     local file, a local server, or the published site) has its own separate store, and those stores do
-                    not merge automatically. Pulse's opt-in cloud sync is the exception: signing in on two devices lets
-                    them share one history.
+                    not merge automatically. The two opt-in exceptions are Pulse cloud sync (signing in on two devices
+                    shares one history) and About Time (everyone who joins the same outing code sees the same state).
                 </p>
             </section>
 
@@ -154,8 +162,12 @@
                         <p class="text-slate-500 mt-1">A CDN that delivers the Lucide icon library used by the hub page. This privacy page deliberately does not load it.</p>
                     </li>
                     <li class="rounded-xl border border-slate-200 bg-white shadow-card px-5 py-4">
-                        <p class="text-slate-800 font-medium">Supabase <span class="text-slate-400 font-normal">&mdash; optional Pulse cloud sync</span></p>
-                        <p class="text-slate-500 mt-1">Only contacted if you sign in to Pulse and turn sync on. Your email address and the records you choose to sync are stored in Pulse's Supabase project, protected by row-level security. Signed out, no request is made.</p>
+                        <p class="text-slate-800 font-medium">Supabase <span class="text-slate-400 font-normal">&mdash; Pulse cloud sync and About Time outings</span></p>
+                        <p class="text-slate-500 mt-1">Pulse: only contacted if you sign in and turn sync on; your email address and the records you choose to sync are stored in Pulse's Supabase project, protected by row-level security. About Time: contacted when you start or join an outing, so the people in that outing can see each other's battery and readiness; it uses an anonymous session with no email or password. Both apps keep their data in the same Supabase project, in separate tables protected by row-level security.</p>
+                    </li>
+                    <li class="rounded-xl border border-slate-200 bg-white shadow-card px-5 py-4">
+                        <p class="text-slate-800 font-medium">Browser push service <span class="text-slate-400 font-normal">&mdash; Apple, Google or Mozilla</span></p>
+                        <p class="text-slate-500 mt-1">Only if you turn on alerts in About Time. Your browser gives the app a push subscription (an endpoint and two public keys), which is stored so a notification can be delivered when someone in your outing is ready to go. The push itself is routed by your browser's own push service, under that provider's privacy policy. Turning alerts off or clearing site data removes the subscription.</p>
                     </li>
                     <li class="rounded-xl border border-slate-200 bg-white shadow-card px-5 py-4">
                         <p class="text-slate-800 font-medium">Bible.com</p>
@@ -182,9 +194,9 @@
                     <li>&mdash; No personal analytics, telemetry, or cross-site tracking.</li>
                     <li>&mdash; No advertising, no ad trackers, no third-party pixels.</li>
                     <li>&mdash; No cookies, and no fingerprinting.</li>
-                    <li>&mdash; No accounts, passwords, or email addresses by default. Pulse's optional sync is the only sign-in, and it is passwordless.</li>
+                    <li>&mdash; No accounts, passwords, or email addresses by default. Pulse's optional sync is the only sign-in, and it is passwordless; About Time uses an anonymous session with no email at all.</li>
                     <li>&mdash; No data sold or shared with anyone. The only analytics is the cookieless aggregate pageview described above.</li>
-                    <li>&mdash; No personal data stored on a server unless you choose to enable Pulse sync.</li>
+                    <li>&mdash; No personal data stored on a server unless you choose to use Pulse sync or join an About Time outing.</li>
                 </ul>
             </section>
 
@@ -206,7 +218,9 @@
                     backup, or clear the site's data to remove it entirely. Every app can export a JSON backup, so do
                     that before clearing anything. If you use Pulse's optional sync, signed-in devices share a copy
                     through Supabase; turning sync off stops further copies, and clearing site data does not by itself
-                    delete records already synced. Bible Tracker additionally detects when browser storage is
+                    delete records already synced. In About Time, leaving an outing deletes your row from the server
+                    (and the outing itself once the last person leaves); turning alerts off or clearing site data
+                    removes the push subscription. Bible Tracker additionally detects when browser storage is
                     unavailable &mdash; in a private window, for instance &mdash; and tells you, rather than appearing to
                     save your progress.
                 </p>
@@ -217,9 +231,10 @@
                 <h3 class="text-lg font-bold text-slate-900">Children</h3>
                 <p class="text-slate-500">
                     No personal information is collected from anyone, including children under 13. There is no account
-                    to create and no form that sends data anywhere by default. The one exception is Pulse's optional
-                    cloud sync, which uses an email address for passwordless sign-in; it is off unless an adult chooses
-                    to enable it.
+                    to create and no form that sends data anywhere by default. The two exceptions are both chosen by an
+                    adult: Pulse's optional cloud sync, which uses an email address for passwordless sign-in, and About
+                    Time, which sends the display name and emoji you type for an outing to the other people who join
+                    that same code. Nothing else is collected.
                 </p>
             </section>
 
