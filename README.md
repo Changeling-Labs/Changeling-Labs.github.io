@@ -33,7 +33,11 @@ whose repo has no Pages site enabled will 404, so add the card only once the app
   four `185.199.10x.153` A records). Until the GitHub org exists, the serving repo keeps its name
   `edmundashdown.github.io` — renaming it would drop the `edmundashdown.github.io → changelinglabs.com`
   redirect and orphan deep links. Nothing on the site presents the name.
-- `edmundashdown.github.io/*` redirects to `changelinglabs.com/*`, so old links keep working.
+- **A project site inherits the custom domain from its owner's user site.** Apps must live under the
+  `Changeling-Labs` org to resolve at `changelinglabs.com/<repo>/`; a repo still under the personal
+  account is served at `edmundashdown.github.io/<repo>/` and returns 404 on the custom domain. Old
+  `edmundashdown.github.io` deep links are **not** redirected — this is how `/car-wash/` broke after
+  the domain moved (fixed 2026-11-08 by transferring the repo to the org).
 - **App data is origin-scoped.** Apps served from `changelinglabs.com` share that origin (as they
   previously shared `edmundashdown.github.io`) — IndexedDB/localStorage do not cross over, so switching
   a user between the two origins starts them with a fresh store (export/import covers moving data).
@@ -81,7 +85,9 @@ transfer, so history and most links survive. The critical sequence:
 1. Create the `changelinglabs` org (needs an org-admin account — the hub currently lives under a personal account).
 2. Create `changelinglabs.github.io` in the org with the hub contents.
 3. Move the custom domain to it (Pages settings → custom domain `changelinglabs.com`).
-4. Transfer `pulse`, `bible-tracker`, `car-wash` into the org one at a time.
+4. Transfer `pulse`, `bible-tracker`, `car-wash` into the org one at a time. **(Done: `pulse`, `bible-tracker`
+   and `car-wash` now live under `Changeling-Labs`; a third-party app repo must be transferred too, or
+   its Pages site will keep the personal-account URL.)**
 5. Point source-code links in `index.html`/`privacy.html`/READMEs at `github.com/changelinglabs/*`.
 6. Keep the user-site repo until the org site builds; then retire it or leave it as a redirect-free archive.
 
